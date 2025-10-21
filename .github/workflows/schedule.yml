@@ -2,7 +2,7 @@ name: SimpleScheduler
 
 on:
     schedule:
-        - cron: "1/2 * * * *"
+        - cron: "*/2 * * * *"
 
 jobs:
     print-job:
@@ -10,4 +10,4 @@ jobs:
         name: A job to just say hello
         steps:
             - name: Simple Hello world
-              run: echo "Hello World ${date}"
+              run: echo "Hello World $(date)"
